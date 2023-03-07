@@ -6,6 +6,6 @@
 trigger:
 - master
 
-pool: virtual machine
+pool: demo
 
-steps:
+steps: 
