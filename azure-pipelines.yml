@@ -9,6 +9,17 @@ trigger:
 pool: virtual machine
 
 steps: 
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    goals: 'compile'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'maa'
