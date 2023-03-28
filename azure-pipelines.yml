@@ -6,6 +6,12 @@
 trigger:
 - master
 
-pool: demo
+pool: virtual machine
 
 steps: 
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'maa'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: false
