@@ -4,7 +4,7 @@
   "description": "Olyseum Smart Contracts",
   "dependencies": {
     "@openzeppelin/contracts": "2.3.0",
-    "@openzeppelin/upgrades": "2.5.2"
+    "@openzeppelin/upgrades": "2.8.0"
   },
   "repository": {
     "type": "git",
